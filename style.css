@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+
+}
+
+.navbar a{
+    font-size: 19px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+
+}
+
+.navbar{
+    animation: fadeInRight 1s ease forwards;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Agar konten dan gambar berada di sisi kiri dan kanan */
+    padding: 0 10%;
+    background-attachment: fixed;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+/* Styling gambar anime di home agar terlihat keren dan elegan */
+.home-image .image-box {
+  width: 500px;
+  height: 650px;
+  border: 5px solid #00abf0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.5);
+}
+
+.image-box {
+  animation: fadeInRight .2s ease forwards, floatAndRotate 4s ease-in-out infinite;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatAndRotate {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.image-box img {
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+
+.image-box:hover img {
+  filter: grayscale(0);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 171, 240, 0.5);
+}
+
+
+.home-image .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+
+.home-image .image-box:hover img {
+  transform: scale(1.05);
+}
+
+/* Animasi mengambang */
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+}
+
+.home-content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color:#00abf0
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 30px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover{
+   color: #00abf0;
+}
+
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2)::before {
+   background: #00abf0 ;
+
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    z-index: -1;
+    transition: .3s;
+}
+
+.btn-box a:hover::before{
+   width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+    z-index: 2;
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+   color: #081b29;
+}
+.home-sci a::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{   
+   width: 100%;
+
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+
+    }
+}
+
+.about {
+    padding: 100px 10%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    color: #ededed;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about .heading {
+    font-size: 42px;
+    margin-bottom: 80px;
+    color: #00abf0;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Tambahan garis aksen di bawah heading */
+.about .heading::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #00abf0;
+    border-radius: 5px;
+}
+
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    max-width: 350px; /* Menjaga gambar tidak terlalu besar */
+    border-radius: 8px; /* Memberikan sedikit kelengkungan agar tidak terlalu kaku */
+    border: 2px solid #00abf0; /* Memberikan border berwarna biru dengan ketebalan 3px */
+    box-shadow: 0 4px 10px rgba(0, 171, 240, 0.2); /* Menambahkan efek shadow untuk kesan profesional */
+    transition: all 0.3s ease; /* Efek transisi ketika gambar dihover */
+    object-fit: cover; /* Memastikan gambar mengisi area dengan baik */
+}
+
+/* Menambahkan efek saat gambar dihover */
+.about-img img:hover {
+    transform: scale(1.05); /* Memberikan efek zoom-in saat hover */
+    box-shadow: 0 10px 20px rgba(0, 171, 240, 0.3); /* Efek shadow lebih besar saat hover */
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #00abf0;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ededed;
+}
+
+.services {
+    padding: 100px 10%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    color: #ededed;
+    text-align: center;
+}
+
+.services .heading {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #00abf0;
+    position: relative;
+}
+
+.service-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background: #0a2239;
+    border: 2px solid #00abf0;
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.service-box:hover {
+    background: #0d2d4c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 171, 240, 0.2);
+}
+
+.service-box i {
+    font-size: 40px;
+    color: #00abf0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.services .heading {
+  font-size: 42px;
+  margin-bottom: 80px;
+  color: #00abf0;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.services .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #00abf0;
+  border-radius: 5px;
+}
+
+.service-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.portfolio {
+    padding: 100px 10%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    color: #ededed;
+}
+
+.portfolio .heading {
+  font-size: 42px;
+  margin-bottom: 80px;
+  color: #00abf0;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.portfolio .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #00abf0;
+  border-radius: 5px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background: #0a2239;
+    border: 2px solid #00abf0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 171, 240, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info h3 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.portfolio-info .btn {
+    display: inline-block;
+    background: #00abf0;
+    color: #081b29;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.portfolio-info .btn:hover {
+    background: transparent;
+    color: #00abf0;
+    border: 2px solid #00abf0;
+}
+
+.contact {
+    padding: 100px 10%;
+    background: linear-gradient(120deg, #081b29 0%, #0d1e33 50%, #1c3a5f 100%);
+    background-attachment: fixed;
+    color: #ededed;
+    text-align: center;
+}
+
+.contact .heading {
+  font-size: 42px;
+  margin-bottom: 80px;
+  color: #00abf0;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #00abf0;
+  border-radius: 5px;
+}
+
+.contact-desc {
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-inline: auto;
+    color: #ccc;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form-group {
+        flex-direction: row;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #0a2239;
+    color: #ededed;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid #00abf0;
+}
+
+.contact-form .btn {
+    width: fit-content;
+    padding: 12px 25px;
+    background: #00abf0;
+    color: #081b29;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+.contact-form .btn:hover {
+    background: transparent;
+    color: #00abf0;
+    border: 2px solid #00abf0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #0a2239;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 15px rgba(0, 171, 240, 0.1);
+    color: #ccc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-info p i{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+
+.contact-info p a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: #ededed;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.contact-info p i a{
+    font-size: 22px;
+    color: #00abf0;
+    transition: color 0.3s;
+}
+
+.contact-info p:hover i,
+.contact-info p:hover a,
+.contact-info p:hover {
+    color: #00abf0;
+    cursor: pointer;
+}
+
+
+
+
+
