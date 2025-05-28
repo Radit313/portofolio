@@ -17,6 +17,76 @@ body {
     color: #ededed;
 }
 
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-image {
+    margin-top: 30px;
+  }
+
+  .home-image .image-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .home-sci {
+    position: static;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-img {
+    text-align: center;
+  }
+
+  .service-boxes,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .btn-box a {
+    width: 100%;
+  }
+
+  .header {
+    padding: 15px 5%;
+  }
+
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+}
 .header{
     position: fixed;
     top:0;
